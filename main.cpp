@@ -9,11 +9,12 @@ int main(int argc, char **argv)
     else
     {
         bool NotPrime;
-        int num, i, j;
+        // Use long longs because they allow for yuge numbers
+        long long num, i, j;
         for(i=1; i<argc; i++)
         {
             NotPrime = false;
-            num = std::stoi(argv[i]);
+            num = std::stoll(argv[i]);
             if(num%2==0)
             {
                 NotPrime=true;
